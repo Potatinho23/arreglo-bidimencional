@@ -1,0 +1,44 @@
+import numpy as np
+def verAsientos():
+    filas = 7
+    columnas = 6
+    primer_asiento_vip = 31
+    data = list(range(1, (filas * columnas) + 1))
+    Asientos = [data[i:i+columnas] for i in range(0, len(data), columnas)]
+
+
+    print("\n\t\tASIENTOS:\n")
+    for fila in range(7):
+        if primer_asiento_vip == ((fila * columnas) + 1):
+            print("|   ----------                                      ----------- |")
+        print (f"|\t{Asientos[fila][0]}\t{Asientos[fila][1]}\t{Asientos[fila]    [2]}\t\t{Asientos[fila][3]}\t{Asientos[fila][4]}\t{Asientos[fila][5]}\t|")
+        
+def comprarAsientos():
+    print("op2")
+def anularVuelo():
+    print("op3")
+def modificarDatos():
+    print("OP4")
+
+menu = True
+try:
+    while menu == True:
+        print("------------")
+        print("MENU INSANO🤓🖐")
+        print("------------")
+        print("1)Ver asientos disponibles\n2)Comprar asiento\n3)Anular vuelo\n4)Modificar datos pasajero\n5)Salir")
+        print("------------")
+        opcion = int(input("Ingrese una opcion: "))
+        if opcion == 1:
+            verAsientos()
+        if opcion == 2:
+            print("OLA", comprarAsientos)
+        if opcion == 3:
+            print("OLA", anularVuelo)
+        if opcion == 4:
+            print("OLA", modificarDatos)
+        if opcion == 5:
+            print("Adiós...")
+            menu = False
+except:
+    print("Error")
