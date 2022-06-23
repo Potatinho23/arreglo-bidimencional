@@ -1,0 +1,12 @@
+filas = 7
+columnas = 6
+primer_asiento_vip = 31
+data = list(range(1, (filas * columnas) + 1))
+Asientos = [data[i:i+columnas] for i in range(0, len(data), columnas)]
+
+
+print("\n\t\tASIENTOS:\n")
+for fila in range(7):
+    if primer_asiento_vip == ((fila * columnas) + 1):
+      print("|   ----------                                      ----------- |")
+    print (f"|\t{Asientos[fila][0]}\t{Asientos[fila][1]}\t{Asientos[fila]    [2]}\t\t{Asientos[fila][3]}\t{Asientos[fila][4]}\t{Asientos[fila][5]}\t|")
